@@ -14,7 +14,6 @@ resource "google_container_cluster" "kubernetes" {
   depends_on         = ["google_project_service.kubernetes"]
   initial_node_count = 1
   location = "us-central1"
-  machine_type = "n1-standard-1"
   node_config {
     oauth_scopes = [
       "https://www.googleapis.com/auth/compute",
