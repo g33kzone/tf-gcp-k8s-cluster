@@ -1,5 +1,6 @@
+variable "creds"{}
 provider "google" {
-  credentials = "${file("/home/mwar/Cloud/GCP/devops/devops-260809-1f72ec5132b0.json")}"
+  credentials = var.creds
   project = "devops-260809"
 }
 
