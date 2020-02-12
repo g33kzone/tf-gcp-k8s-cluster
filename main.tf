@@ -13,7 +13,7 @@ resource "google_container_cluster" "kubernetes" {
   name               = "devops-pipelines-cicd-dev"
   depends_on         = ["google_project_service.kubernetes"]
   initial_node_count = 1
-  location = "us-central1"
+  zone = "us-central1-a"
   node_config {
     oauth_scopes = [
       "https://www.googleapis.com/auth/compute",
